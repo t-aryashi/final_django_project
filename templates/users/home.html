@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Service</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}"><h2>Restaurant Service</h2></a>
+        <div>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </div>
+    </nav>
+    <div class="lpdiv">
+        <h1>A genuine fine-dining experience awaits.</h1>
+        <p>It's time to enjoy the fine things in life.</p>
+    </div>
+</body>
+</html>
+
+{% comment %} jPbR4LcA5aCaWW! {% endcomment %}

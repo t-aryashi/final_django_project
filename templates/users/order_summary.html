@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}"><h2>Restaurant Service</h2></a>
+        <div class="flex2">
+            <form class="flex" method="get" action="{% url 'menu' %}">
+                <input type="text" name="q" value="{{ query }}" placeholder="Search for menu items">
+                <button class="search-icon" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button class="btn2" type="submit">Logout</button>
+            </form>
+        {% endif %}
+        </div>
+    </nav>
+    <div class="flex2">
+        <h1>Order Summary</h1>
+    </div>
+    <div class="menu-container">
+        {% if cart_items %}
+            {% for cart_item in cart_items %}
+                <div class="menu-card">
+                    <h2>{{ cart_item.menu_item.name }}</h2>
+                    <p>{{ cart_item.menu_item.description }}</p>
+                    <p><strong>Price:</strong> ${{ cart_item.menu_item.price }}</p>
+                    <p>
+                        <strong>Quantity:</strong>
+                        <form method="post" action="{% url 'update_cart_item' cart_item.id %}">
+                            {% csrf_token %}
+                            <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1">
+                            <button type="submit">Update</button>
+                        </form>
+                    </p>
+                </div>
+            {% endfor %}
+            <div class="menu-card">
+                <h3>Total Amount: ${{ total_amount }}</h3>
+                <a href="{% url 'confirm_order' %}" class="btn">Confirm Order</a>
+            </div>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

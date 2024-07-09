@@ -1,0 +1,250 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    height: 5vh;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: aquamarine;
+}
+
+nav h2 {
+    color: aquamarine;
+}
+
+.lpdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh;
+    height: 82vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://www.cvent.com/sites/default/files/styles/focus_scale_and_crop_800x450/public/migrated_attachments/meal-918638_1280-1.jpg?itok=dMJGxEC2');
+}
+
+.lpdiv h1{
+    color: aquamarine;
+    font-size: 12vh;
+    margin: 0;
+}
+.lpdiv p{
+    color: #ffffff;
+    font-size: 4vh;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.menu-card strong {
+    color: #333;
+}
+
+.menu-card form {
+    margin-top: 10px;
+}
+
+.menu-card button {
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.menu-card button:hover {
+    background-color: #ff3b2f;
+}
+
+.body-wrapper {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+h1 {
+    color: #333;
+}
+
+.form-wrapper {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn2 {
+    background-color: aquamarine;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex2{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.search-icon i {
+    font-size: 16px;
+}
+
+.search-icon:hover {
+    color: aquamarine;
+}
+
+/* Add this to your style.css */
+
+.user-profile {
+    margin-top: 2vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile h1,
+.user-profile h2 {
+    color: #333;
+    text-align: center;
+}
+
+.user-profile p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.user-profile a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.user-profile a:hover {
+    background-color: #0056b3;
+}
+
+.user-profile ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-profile ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile ul ul {
+    padding-left: 20px;
+}
+
+.user-profile ul ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+}
